@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12, 10.375" name="Pets2BD">
+  <DataContextMoniker Name="/Pets2BDDataContext" />
+  <nestedChildShapes>
+    <classShape Id="6e8e00b0-51b1-47db-9d14-21285eb26750" absoluteBounds="3.5, 1.125, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/Pets2BDDataContext/Compra_Medalha" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0cdb1ec3-9eb8-41f8-abc5-82b6e817b7e8" absoluteBounds="3.515, 1.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2c2314ad-79b0-42e4-bd23-9ec6fee999f8" absoluteBounds="6.75, 0.75, 2, 2.9247054036458326">
+      <DataClassMoniker Name="/Pets2BDDataContext/Dono" />
+      <nestedChildShapes>
+        <elementListCompartment Id="10b7d42f-8999-48ae-8bf1-da9519d7e718" absoluteBounds="6.765, 1.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e65583f9-b187-4154-8272-3bb56c655f43" absoluteBounds="6.75, 4.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/Pets2BDDataContext/Html_Email" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6dee337f-e774-4340-b16d-1bdbec23aeab" absoluteBounds="6.765, 5.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d7ee9484-a7d1-4621-b835-455f028d53c7" absoluteBounds="0.75, 2.875, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/Pets2BDDataContext/Pet" />
+      <nestedChildShapes>
+        <elementListCompartment Id="58c093df-9870-40bb-ba21-e77a7b707d73" absoluteBounds="0.765, 3.335, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c6213d57-a258-4a20-94a5-3b4fd0316005" absoluteBounds="3.5, 3.625, 2, 3.6939111328124992">
+      <DataClassMoniker Name="/Pets2BDDataContext/Pets_Desaparecido" />
+      <nestedChildShapes>
+        <elementListCompartment Id="edb1d77a-a381-4d70-b74e-9d6ca4a76c2e" absoluteBounds="3.515, 4.085, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="537758f0-4fb3-4833-b3f3-168ae4d17be5" absoluteBounds="6.75, 6.75, 2, 2.9247054036458318">
+      <DataClassMoniker Name="/Pets2BDDataContext/Pets_Encontrado" />
+      <nestedChildShapes>
+        <elementListCompartment Id="05d9daf6-d669-46b9-ace6-d782b5ada58e" absoluteBounds="6.765, 7.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9cd10341-dc0c-4910-87e0-1c91c4c30d38" absoluteBounds="0.75, 8.75, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/Pets2BDDataContext/Produto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="aec31ef2-2f16-4ff3-997d-adfc6512b3ba" absoluteBounds="0.765, 9.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b66204a8-66c7-4543-8a5f-65731ee84c55" absoluteBounds="9.75, 0.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/Pets2BDDataContext/Racas_Pet" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3d1f5c28-f309-4efd-b3a7-0d9e688cd5fd" absoluteBounds="9.765, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.75 : 2.875); (1.75 : 1.9999995); (3.5 : 1.9999995)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/Pets2BDDataContext/Pet/Pet_Compra_Medalha" />
+      <nodes>
+        <classShapeMoniker Id="d7ee9484-a7d1-4621-b835-455f028d53c7" />
+        <classShapeMoniker Id="6e8e00b0-51b1-47db-9d14-21285eb26750" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.61620198567708); (3.5 : 4.61620198567708)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/Pets2BDDataContext/Pet/Pet_Pets_Desaparecido" />
+      <nodes>
+        <classShapeMoniker Id="d7ee9484-a7d1-4621-b835-455f028d53c7" />
+        <classShapeMoniker Id="c6213d57-a258-4a20-94a5-3b4fd0316005" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

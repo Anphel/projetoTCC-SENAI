@@ -1,0 +1,2 @@
+Trabalho novamente sobre Login, evoluindo nas Sessions e redirecionamento após cadastro.
+Login finalizado, faltando apenas a função de "Esqueci minha senha".

@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Pets2" Class="Pets2BDDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=localhost;Initial Catalog=Pets2;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="Pets2ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Compra_Medalha" Member="Compra_Medalhas">
+    <Type Name="Compra_Medalha">
+      <Column Name="produto_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="pet_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nome_pet" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="telefone_dono" Type="System.String" DbType="NVarChar(12)" CanBeNull="true" />
+      <Column Name="preco_medalha" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Association Name="Pet_Compra_Medalha" Member="Pet" ThisKey="pet_id" OtherKey="pet_id" Type="Pet" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Dono" Member="Donos">
+    <Type Name="Dono">
+      <Column Name="id_dono" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nome_dono" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="sobrenome_dono" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="email_dono" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="senha_dono" Type="System.String" DbType="NVarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="imagem_dono" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="endereco_dono" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="endereco_lat" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="endereco_long" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="facebook_dono" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="telefone_dono" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Html_Email" Member="Html_Emails">
+    <Type Name="Html_Email">
+      <Column Name="html_email_des" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="html_email_senha" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Pet" Member="Pets">
+    <Type Name="Pet">
+      <Column Name="pet_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nome_pet" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="endereco_dono" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="especie_pet" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="raca_pet" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="sexo_pet" Type="System.String" DbType="NVarChar(6)" CanBeNull="true" />
+      <Column Name="cor_pet" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="dono_pet" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="status_pet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="foto_pet" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Pet_Compra_Medalha" Member="Compra_Medalhas" ThisKey="pet_id" OtherKey="pet_id" Type="Compra_Medalha" />
+      <Association Name="Pet_Pets_Desaparecido" Member="Pets_Desaparecidos" ThisKey="pet_id" OtherKey="pet_id" Type="Pets_Desaparecido" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Pets_Desaparecidos" Member="Pets_Desaparecidos">
+    <Type Name="Pets_Desaparecido">
+      <Column Name="id_desaparecimento" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="pet_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nome_pet" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="especie_pet" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="raca_pet" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="sexo_pet" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="cor_pet" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="dono_pet" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="telefone_dono" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="facebook_dono" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="endereco" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="endereco_loca_lat" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="endereco_loca_lng" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="data_des" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="hora_des" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="Pet_Pets_Desaparecido" Member="Pet" ThisKey="pet_id" OtherKey="pet_id" Type="Pet" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Pets_Encontrados" Member="Pets_Encontrados">
+    <Type Name="Pets_Encontrado">
+      <Column Name="id_encontro" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="pet_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nome_pet" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="dono_pet" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="especie_pet" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="raca_pet" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sexo_pet" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="data_enc" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="hora_enc" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="data_des" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="hora_des" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Produto" Member="Produtos">
+    <Type Name="Produto">
+      <Column Name="produto_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nome_produto" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="descricao_produto" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Racas_Pets" Member="Racas_Pets">
+    <Type Name="Racas_Pet">
+      <Column Name="pets_cachorro" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="pets_gato" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

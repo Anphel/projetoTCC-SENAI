@@ -1,0 +1,4 @@
+http://jsfiddle.net/ekba9y8w/
+https://jsfiddle.net/alexFrontEnd/bw7a2x8e/10/
+http://stackoverflow.com/questions/23571925/google-map-not-rendering-under-collapse-bootstrap
+http://jsfiddle.net/5WMff/
